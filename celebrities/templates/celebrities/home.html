@@ -1,0 +1,17 @@
+{% extends 'celebrities/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1 style="text-align:center; margin-bottom: 30px;">Mashhur Shaxslar Galereyasi</h1>
+
+<div class="gallery">
+    {% for celebrity in celebrities %}
+        <div class="card">
+            <a href="{% url 'celebrity_detail' celebrity.id %}">
+                <img src="{% static celebrity.image %}" alt="{{ celebrity.name }}">
+                <h3>{{ celebrity.name }}</h3>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

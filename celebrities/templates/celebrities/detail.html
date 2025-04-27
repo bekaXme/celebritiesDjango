@@ -1,0 +1,9 @@
+{% extends 'celebrities/base.html' %}
+
+{% block content %}
+    <h2>{{ celebrity.name }}</h2>
+    <img src="/static/{{ celebrity.image }}" alt="{{ celebrity.name }}" width="300">
+    <h3>{{ celebrity.profession }}</h3>
+    <p>{{ celebrity.bio }}</p>
+    <a href="/">Orqaga</a>
+{% endblock %}
